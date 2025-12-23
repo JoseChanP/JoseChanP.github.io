@@ -40,3 +40,19 @@ nav: false # Hides it from the top navbar to keep it clean
     </div>
   </div>
 </div>
+
+<h3 class="mt-5 mb-4" style="color: var(--global-text-color);">Certifications</h3>
+
+<div class="row">
+  <div class="col-12">
+    <div class="p-3 rounded-3 mb-3" style="background-color: #111; border: 1px solid #333;">
+      <div class="d-flex align-items-center">
+        <i class="fas fa-robot fa-2x mr-3" style="color: #666;"></i>
+        <div>
+          <h5 class="m-0 text-white">ROS2 & Robotics Developer</h5>
+          <p class="m-0 text-muted small">The Construct Sim • Linux, Python for Robotics, ROS2 Basics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
