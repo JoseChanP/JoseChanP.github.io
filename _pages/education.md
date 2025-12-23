@@ -10,6 +10,10 @@ nav_order: 3
 {% include back_button.html %}
 
 <style>
+    header.post-header {
+    display: none !important;
+  }
+  
   /* 1. Force Wide Layout */
   .container, .container-fluid {
     max-width: 1600px !important;

@@ -10,6 +10,10 @@ nav_order: 2
 {% include back_button.html %}
 
 <style>
+  header.post-header {
+    display: none !important;
+  }
+  
   /* 1. BREAK THE CONTAINER: Force the page to be wider */
   .container, .container-fluid {
     max-width: 1600px !important; /* Forces the layout to be much wider */
