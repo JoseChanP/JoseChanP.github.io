@@ -147,22 +147,21 @@ nav_order: 2
     <div class="bento-card">
       <img src="{{ '/assets/img/odom.gif' | relative_url }}" class="project-header-img" alt="Odometry">
       
+
+        
       <div class="card-content">
-        <h4>Diff-Drive Odometry</h4>
+        <h4>Monocular Visual Odometry</h4>
         <p>
-          Developed a custom kinematic model for a differential drive robot to track pose $(x, y, \theta)$ solely from wheel encoder data. Analyzed error propagation and optimized trajectory tracking accuracy by implementing a Runge-Kutta integration method to reduce drift over long paths.
+          Implemented a vision-based pose estimation pipeline using <strong>OpenCV</strong>. Utilized <strong>Lucas-Kanade Optical Flow</strong> to track features across frames and computed the <strong>Essential Matrix</strong> using RANSAC. Recovered the camera's rotation and translation $(R, t)$ to reconstruct the 3D trajectory and validated performance against ground truth sequences.
         </p>
         
         <div class="tech-stack">
           <span class="tech-pill">Python</span>
+          <span class="tech-pill">OpenCV</span>
           <span class="tech-pill">NumPy</span>
-          <span class="tech-pill">Matplotlib</span>
-          <span class="tech-pill">Kinematics</span>
-          <span class="tech-pill">Control Theory</span>
-          <span class="tech-pill">Differential Eq</span>
-          <span class="tech-pill">Jupyter Notebooks</span>
-          <span class="tech-pill">Sensor Fusion</span>
-          <span class="tech-pill">Error Analysis</span>
+          <span class="tech-pill">Optical Flow</span>
+          <span class="tech-pill">Epipolar Geometry</span>
+          <span class="tech-pill">Computer Vision</span>
         </div>
 
         <a href="https://github.com/JoseChanP/your-odom-repo" target="_blank" class="btn btn-outline-light mt-auto">
@@ -176,21 +175,21 @@ nav_order: 2
     <div class="bento-card">
       <img src="{{ '/assets/img/recommender.png' | relative_url }}" class="project-header-img" alt="Recommender System">
       
+
+        
       <div class="card-content">
-        <h4>Personalized Recommender</h4>
+        <h4>Transformer Recommender (SASRec)</h4>
         <p>
-          Built a rating prediction engine using latent factor models and collaborative filtering. Implemented <strong>Jaccard</strong> and <strong>Pearson</strong> similarity metrics to analyze user behavior. The final model utilizes matrix factorization to predict user preferences for unrated items with high accuracy (low MSE).
+          Built a <strong>Self-Attentive Sequential Recommendation (SASRec)</strong> model using <strong>PyTorch</strong> and <strong>Transformer Encoders</strong>. The model processes user timelines with learned positional and genre embeddings to predict next-item interactions. Benchmarked performance against <strong>Markov Chains</strong> and Hybrid statistical baselines, achieving superior hit rates.
         </p>
         
         <div class="tech-stack">
-          <span class="tech-pill">TensorFlow</span>
+          <span class="tech-pill">PyTorch</span>
+          <span class="tech-pill">Transformers</span>
+          <span class="tech-pill">Deep Learning</span>
           <span class="tech-pill">Pandas</span>
-          <span class="tech-pill">Scikit-Learn</span>
-          <span class="tech-pill">Matplotlib</span>
-          <span class="tech-pill">Collaborative Filtering</span>
-          <span class="tech-pill">Matrix Factorization</span>
-          <span class="tech-pill">Data Visualization</span>
-          <span class="tech-pill">Statistical Analysis</span>
+          <span class="tech-pill">Markov Chains</span>
+          <span class="tech-pill">Sequential Modeling</span>
         </div>
 
         <a href="https://github.com/JoseChanP/your-recommender-repo" target="_blank" class="btn btn-outline-light mt-auto">
