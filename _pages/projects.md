@@ -10,107 +10,110 @@ nav_order: 2
 {% include back_button.html %}
 
 <style>
-  /* 1. The "Beefy" Card Style */
+  /* 1. BREAK THE CONTAINER: Force the page to be wider */
+  .container, .container-fluid {
+    max-width: 1600px !important; /* Forces the layout to be much wider */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* 2. The "Super Sized" Card */
   .bento-card {
-    background-color: #121212; /* Deep dark background */
+    background-color: #121212;
     border: 1px solid #333;
-    border-radius: 16px;
+    border-radius: 20px; /* More rounded */
     overflow: hidden;
-    height: 100%;       /* Fills the column height */
-    min-height: 550px;  /* FORCES the card to be tall/big */
+    height: 100%;
+    min-height: 600px; /* Massive height */
     display: flex;
     flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  /* Dark mode check */
   body.dark .bento-card {
-    background-color: #1e1e1e;
+    background-color: #1a1a1a;
     border-color: #333;
   }
 
   .bento-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    border-color: #666;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border-color: #777;
   }
 
-  /* 2. Taller Header Image */
+  /* 3. Huge Header Image */
   .project-header-img {
     width: 100%;
-    height: 220px; /* Increased from 180px to make it pop */
+    height: 260px; /* Very tall image area */
     object-fit: cover;
     border-bottom: 1px solid #222;
   }
 
-  /* 3. Spacious Content Area */
+  /* 4. Content Scaling */
   .card-content {
-    padding: 30px; /* Increased padding for that "big card" feel */
+    padding: 35px; /* Massive padding */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
 
-  /* 4. Typography Updates */
   .bento-card h4 {
     color: #fff;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 800; /* Extra bold */
+    font-size: 1.75rem; /* Huge Title */
     margin-bottom: 15px;
   }
   
   .bento-card p {
     color: #bbb;
-    font-size: 0.95rem;
-    line-height: 1.6; /* More spacing between lines */
-    margin-bottom: 25px;
+    font-size: 1.05rem; /* Larger body text */
+    line-height: 1.7;
+    margin-bottom: 30px;
   }
 
-  /* 5. Tech Pills */
+  /* 5. Dense Tech Pills */
   .tech-stack {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   
   .tech-pill {
-    background-color: #222;
+    background-color: #252525;
     border: 1px solid #333;
-    color: #e0e0e0;
-    font-size: 0.75rem;
+    color: #eee;
+    font-size: 0.85rem; /* Bigger text in pills */
     font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 20px;
-    margin-right: 6px;
-    margin-bottom: 6px;
+    padding: 8px 16px; /* Bigger bubbles */
+    border-radius: 25px;
+    margin-right: 8px;
+    margin-bottom: 8px;
     display: inline-block;
   }
 
-  /* 6. Bottom Button */
-  .btn-code {
-    background-color: transparent;
-    border: 1px solid #444;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.2s;
-    width: fit-content;
-    text-decoration: none !important;
-    margin-top: auto; /* Pushes button to the very bottom */
+  /* 6. Big Title Styling */
+  .page-title {
+    font-size: 4rem !important; /* Massive "Projects" text */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
   }
-
-  .btn-code:hover {
-    background-color: #333;
-    border-color: #777;
-    color: #fff;
+  
+  .title-icon {
+    color: var(--global-theme-color);
+    margin-right: 15px;
+    opacity: 0.8;
   }
 </style>
 
+<div class="mb-5 mt-4">
+  <h1 class="page-title">
+    <span class="title-icon"><i class="fas fa-code"></i></span>Projects
+  </h1>
+  <p class="text-muted" style="font-size: 1.2rem;">A collection of my work in Robotics, Machine Learning, and Software Engineering.</p>
+</div>
+
 <div class="row">
   
-  <div class="col-md-4 mb-5">
+  <div class="col-lg-4 col-md-6 mb-5">
     <div class="bento-card">
       <img src="{{ '/assets/img/lost_found.gif' | relative_url }}" class="project-header-img" alt="Lost Found Bot">
       
@@ -124,20 +127,23 @@ nav_order: 2
           <span class="tech-pill">ROS 2 (Foxy)</span>
           <span class="tech-pill">Nav2</span>
           <span class="tech-pill">SLAM Toolbox</span>
-          <span class="tech-pill">OAK-D (CV)</span>
+          <span class="tech-pill">OAK-D Camera</span>
+          <span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">Visual Servoing</span>
+          <span class="tech-pill">Twist Mux</span>
           <span class="tech-pill">Docker</span>
           <span class="tech-pill">Raspberry Pi 5</span>
           <span class="tech-pill">Python</span>
         </div>
 
-        <a href="https://github.com/UCSD-ECEMAE-148/fall-2025-final-project-team-10" target="_blank" class="btn-code">
+        <a href="https://github.com/UCSD-ECEMAE-148/fall-2025-final-project-team-10" target="_blank" class="btn btn-outline-light mt-auto">
           <i class="fab fa-github mr-2"></i> View Code
         </a>
       </div>
     </div>
   </div>
 
-  <div class="col-md-4 mb-5">
+  <div class="col-lg-4 col-md-6 mb-5">
     <div class="bento-card">
       <img src="{{ '/assets/img/odom.gif' | relative_url }}" class="project-header-img" alt="Odometry">
       
@@ -153,16 +159,20 @@ nav_order: 2
           <span class="tech-pill">Matplotlib</span>
           <span class="tech-pill">Kinematics</span>
           <span class="tech-pill">Control Theory</span>
+          <span class="tech-pill">Differential Eq</span>
+          <span class="tech-pill">Jupyter Notebooks</span>
+          <span class="tech-pill">Sensor Fusion</span>
+          <span class="tech-pill">Error Analysis</span>
         </div>
 
-        <a href="https://github.com/JoseChanP/your-odom-repo" target="_blank" class="btn-code">
+        <a href="https://github.com/JoseChanP/your-odom-repo" target="_blank" class="btn btn-outline-light mt-auto">
           <i class="fab fa-github mr-2"></i> View Code
         </a>
       </div>
     </div>
   </div>
 
-  <div class="col-md-4 mb-5">
+  <div class="col-lg-4 col-md-6 mb-5">
     <div class="bento-card">
       <img src="{{ '/assets/img/recommender.png' | relative_url }}" class="project-header-img" alt="Recommender System">
       
@@ -177,10 +187,13 @@ nav_order: 2
           <span class="tech-pill">Pandas</span>
           <span class="tech-pill">Scikit-Learn</span>
           <span class="tech-pill">Matplotlib</span>
-          <span class="tech-pill">Data Science</span>
+          <span class="tech-pill">Collaborative Filtering</span>
+          <span class="tech-pill">Matrix Factorization</span>
+          <span class="tech-pill">Data Visualization</span>
+          <span class="tech-pill">Statistical Analysis</span>
         </div>
 
-        <a href="https://github.com/JoseChanP/your-recommender-repo" target="_blank" class="btn-code">
+        <a href="https://github.com/JoseChanP/your-recommender-repo" target="_blank" class="btn btn-outline-light mt-auto">
           <i class="fab fa-github mr-2"></i> View Code
         </a>
       </div>
