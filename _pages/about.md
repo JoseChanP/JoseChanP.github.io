@@ -1,34 +1,72 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+subtitle: # Keep this empty
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<div class="hero-section text-center">
+  
+  <img src="{{ '/assets/img/your-profile-pic.jpg' | relative_url }}" 
+       alt="Jose A. Chan Pineda" 
+       class="hero-image rounded-circle">
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+  <h1 class="hero-name">Jose A. Chan Pineda</h1>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+  <h2 class="hero-subtitle">CS & Statistics @ UCSD | ML & Robotics Researcher</h2>
+
+  <p class="hero-intro">
+    I am a double major in Computer Science and Probability & Statistics, passionate about bridging the gap between software and the physical world. My work focuses on <strong>Machine Learning</strong>, <strong>Computer Vision</strong>, and <strong>Embodied AI</strong>—building autonomous systems that can perceive, plan, and act in real-time.
+  </p>
+
+  <div class="hero-buttons my-4">
+    <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary shadow-sm">View Projects</a>
+    
+    <a href="{{ '/assets/pdf/your-resume.pdf' | relative_url }}" target="_blank" class="btn btn-outline-primary shadow-sm">
+      <i class="fas fa-download mr-1"></i> My Resume
+    </a>
+  </div>
+
+  <div class="hero-social">
+    <a href="https://github.com/JoseChanP" target="_blank" class="mx-2 text-decoration-none">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <a href="https://linkedin.com/in/jose-chan-89909925b" target="_blank" class="mx-2 text-decoration-none">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="Jcp316anton@gmail.com" class="mx-2 text-decoration-none">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a>
+  </div>
+
+</div>
+
+<div class="my-5"></div>
+
+<style>
+  .hero-section { padding: 60px 0 40px; }
+  .hero-image {
+    width: 180px; height: 180px; object-fit: cover;
+    border: 5px solid var(--global-bg-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+  }
+  .hero-name { font-weight: 800; font-size: 3.5rem; margin-bottom: 10px; }
+  .hero-subtitle {
+    font-weight: 400; font-size: 1.5rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 25px;
+  }
+  .hero-intro {
+    max-width: 700px; margin: 0 auto 35px auto;
+    font-size: 1.15rem; line-height: 1.6;
+  }
+  .hero-buttons .btn {
+    margin: 0 10px; padding: 12px 30px;
+    border-radius: 50px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
+  }
+  .hero-social a { color: var(--global-text-color-light); transition: color 0.3s ease; }
+  .hero-social a:hover { color: var(--global-theme-color); }
+  body.dark .hero-image { box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1); }
+</style>
