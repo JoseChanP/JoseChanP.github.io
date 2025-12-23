@@ -3,7 +3,7 @@ layout: page
 title: Education
 permalink: /education/
 description: Academic background and qualifications
-nav: false # Hides it from the top navbar to keep it clean
+nav: true # Hides it from the top navbar to keep it clean
 ---
 
 {% include back_button.html %}
