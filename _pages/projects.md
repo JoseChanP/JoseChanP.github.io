@@ -196,7 +196,7 @@ nav_order: 2
           <span class="tech-pill">Sequential Modeling</span>
         </div>
 
-        <a href="https://github.com/JoseChanP/your-recommender-repo" target="_blank" class="btn btn-outline-light mt-auto">
+        <a href="https://github.com/JoseChanP/Sequential-Recommender" target="_blank" class="btn btn-outline-light mt-auto">
           <i class="fab fa-github mr-2"></i> View Code
         </a>
       </div>
